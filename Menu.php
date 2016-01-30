@@ -1,9 +1,8 @@
-
          <div class="sidebar-menu">
             <div class="sidebar-menu-inner">
                <header class="logo-env">
                   <!-- logo --> 
-                  <div class="logo"> <a href="index.php"> <img src="assets/images/logo_trsp.png" width="120" alt="" /> </a> </div>
+                  <div class="logo"> <a href="<?php echo ROOT_URL;?>/index.php"> <img src="<?php echo ROOT_URL;?>/assets/images/logo_trsp.png" width="120" alt="" /> </a> </div>
                   <!-- logo collapse icon --> 
                   <div class="sidebar-collapse">
                      <a href="#" class="sidebar-collapse-icon">
@@ -22,7 +21,7 @@
                 
                   
 				  <li> 
-				     <a href="index.php"><i class="entypo-home"></i><span class="title">Home</span></a> 
+				     <a href="<?php echo ROOT_URL;?>/index.php"><i class="entypo-home"></i><span class="title">Home</span></a> 
 				  </li>
 				  
 				   <li class="has-sub">
@@ -50,7 +49,7 @@
                   </li>
 				 
 				   <li> 
-				     <a href="map.php"><i class="entypo-map"></i><span class="title">Show map</span></a> 
+				     <a href="<?php echo ROOT_URL;?>/admin/show_map.php"><i class="entypo-map"></i><span class="title">Show map</span></a> 
 				  </li>
 				  
 
