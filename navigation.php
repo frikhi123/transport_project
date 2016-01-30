@@ -7,7 +7,7 @@
 				<li class="profile-info dropdown">
 					<!-- add class "pull-right" if you want to place this from right -->
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="assets/images/hamza.jpg" alt="" class="img-circle" width="44" />
+						<img src="<?php echo ROOT_URL;?>/assets/images/hamza.jpg" alt="" class="img-circle" width="44" />
                          Fikhi Hamza
 					</a>
 					
