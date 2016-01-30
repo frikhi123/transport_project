@@ -1,7 +1,7 @@
     <?php 
-	include '../header.php';
-	include '../Menu.php';
-	include '../Navigation.php';
+	include '../includes/header.php';
+	include '../includes/Menu.php';
+	include '../includes/Navigation.php';
 
 	?>    
 
@@ -36,4 +36,4 @@
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<?php 	include '../footer.php';	?>  
+<?php 	include '../includes/footer.php';	?>  

@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <?php 
    define('ROOT_DIR', dirname(__FILE__));
-   define('ROOT_URL', substr($_SERVER['PHP_SELF'], 0, - (strlen($_SERVER['SCRIPT_FILENAME']) - strlen(ROOT_DIR))));
+   define('ROOT_URL', substr($_SERVER['PHP_SELF'], 0, - (strlen($_SERVER['SCRIPT_FILENAME']) - strlen(ROOT_DIR) + 9)));
 ?>
 <html lang="en">
    <!-- Mirrored from demo.neontheme.com/skins/facebook/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jan 2016 14:56:13 GMT -->
@@ -15,7 +15,7 @@
       <title>Projet tutoré</title>
       <link rel="stylesheet" href="<?php echo ROOT_URL;?>/assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css" id="style-resource-1">
       <link rel="stylesheet" href="<?php echo ROOT_URL;?>/assets/css/font-icons/entypo/css/entypo.css" id="style-resource-2">
-      <link rel="stylesheet" href="<?php echo ROOT_URL;?>/http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic" id="style-resource-3">
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic" id="style-resource-3">
       <link rel="stylesheet" href="<?php echo ROOT_URL;?>/assets/css/bootstrap.css" id="style-resource-4">
       <link rel="stylesheet" href="<?php echo ROOT_URL;?>/assets/css/neon-core.css" id="style-resource-5">
       <link rel="stylesheet" href="<?php echo ROOT_URL;?>/assets/css/neon-theme.css" id="style-resource-6">
