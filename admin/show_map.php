@@ -55,13 +55,6 @@
 
       });
     }
-
-    var loc = new google.maps.LatLng(34.259197, -6.588783);
-    var marker = new google.maps.Marker({
-      position : loc,
-      map : carte
-
-    });
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
