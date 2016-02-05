@@ -21,6 +21,7 @@
   echo '<input type = "hidden" value = "'.$row1['lat'].','.$row1['lng'].'" id = "school">';
   // premiere commit
   //deuxieme commit
+  //troisieme commit
 ?>    
 
 <div class="row">
