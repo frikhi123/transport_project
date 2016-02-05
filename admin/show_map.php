@@ -19,6 +19,7 @@
   $query1->execute();
   $row1=$query1->fetch();
   echo '<input type = "hidden" value = "'.$row1['lat'].','.$row1['lng'].'" id = "school">';
+  // premiere commit
 ?>    
 
 <div class="row">
