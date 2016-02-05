@@ -11,9 +11,14 @@
   echo '<input type = "hidden" value = "'.$nbr.'" id = "nbr">';
   $i = 1;
   while($row=$query->fetch()){
-    echo '<input type = "hidden" value = "'.$row['lat'].','.$row['lng'].'" id = "marker'.$i.'">';
+    echo '<input type = "hidden" value = "'.$row['lat'].','.$row['lng'].','.$row['fname'].','.$row['lname'].'" id = "marker'.$i.'">';
     $i++;
   }
+
+  $query1 = $db->prepare('SELECT * FROM school WHERE id_school = 1');
+  $query1->execute();
+  $row1=$query1->fetch();
+  echo '<input type = "hidden" value = "'.$row1['lat'].','.$row1['lng'].'" id = "school">';
 ?>    
 
 <div class="row">
@@ -38,8 +43,8 @@
 <script>
   function initialize() {
     var mapProp = {
-      center:new google.maps.LatLng(34.03128,-6.77056),
-      zoom:5,
+      center:new google.maps.LatLng(34.251816,-6.587998),
+      zoom:14,
       mapTypeId:google.maps.MapTypeId.ROADMAP
     };
     var carte = new google.maps.Map(document.getElementById("googleMap"), mapProp);
@@ -52,9 +57,26 @@
       var marker = new google.maps.Marker({
         position : loc,
         map : carte
-
       });
+      
     }
+
+    var contentString = '<h3>'+"Lycee technique ibn sina"+'</h3>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    position = document.getElementById('school').value;
+    tPosition = position.split(',');
+    var loc = new google.maps.LatLng(tPosition[0], tPosition[1]);
+    var marker = new google.maps.Marker({
+        position : loc,
+        map : carte,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+      });
+    marker.addListener('click', function() {
+        infowindow.open(carte, marker);
+      });
+
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
