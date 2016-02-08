@@ -1,1 +1,1 @@
-<?php include '../charts.php';?>
+<?php include '../includes/charts.php';?>
